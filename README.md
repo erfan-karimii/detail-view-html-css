@@ -26,7 +26,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://erfan-karimii.github.io/detail-view-html-css/)
+- [Live Site URL](https://erfan-karimii.github.io/detail-view-html-css/)
 
 ## My process
 
