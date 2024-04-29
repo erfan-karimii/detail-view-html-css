@@ -10,9 +10,11 @@ html{
     padding:0; 
     */
 }
-
+ul{
+    padding: 0px;
+}
 h1,h2,h3,h4,h5,h6 {
-    
+    margin: 0;
     font-size: inherit;
 }
 
@@ -20,10 +22,14 @@ body {
     margin: 0;
     font-family: "Kumbh Sans", sans-serif;
 }
+.main hr{
+    display: none;
+}
 .stop-scrolling {
     height: 100%;
     overflow: hidden;
 }
+
 nav{
     display: none;
 }
@@ -32,7 +38,7 @@ nav{
     width: 100%;
     height: 100%;
     position: absolute;
-    z-index: 1;
+    z-index: 2;
     background-color: black;
     opacity: 60%;
     margin-top: 6px;
@@ -44,7 +50,7 @@ nav{
     background-color: white;
     height: 100%;
     width: 70%;
-    z-index: 2;
+    z-index: 3;
     display: none;
 }
 
@@ -67,10 +73,17 @@ nav{
 #logo-text{
     font-size: 1.7rem;
     margin-left: 0px;
+    letter-spacing: -1px;
 }
-
+#avatar-icon{
+    height: 22px;
+}
 #avatar-icon,#cart-icon{
     float: right;
+}
+
+#avatar-icon:hover,#cart-icon:hover{
+    cursor: pointer;
 }
 
 .menu-icon:hover{
@@ -83,18 +96,41 @@ nav{
     display: flex;
 }
 
+.thumbnail-images{
+    display: none;
+}
+
 .slider-image{
     width: 100%;
     height: 322px;
     position: absolute;
+    display: none;
+}
+
+.displaySlide{
+    display: block;
+    animation-name: fade;
+    animation-duration: 1s;
+}
+
+@keyframes fade {
+    from {opacity: .5}
+    to {opacity: 1}
 }
 
 .buttons {
-    padding: 10px;
+    padding: 15px;
     display: flex;
     align-self: center;
     width: 100%;
     justify-content: space-between;
+    z-index: 1;
+}
+
+#nextButton,#prevButton{
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 120px;
 }
 
 .information-container{
@@ -103,14 +139,27 @@ nav{
 
 .discription{
     display: flex;
+    justify-content: center;
     flex-direction: column;
-    
+}
+
+.discription h2{
+    font-size: 2.5rem;
+}
+
+.discription #title{
+    color: hsl(26, 100%, 55%);
+    font-weight: bold;
 }
 
 .price-offer{
     display: flex;
     flex-direction: row;
     align-items: center; 
+}
+.total-price{
+    font-weight: bolder;
+    font-size: 2rem;
 }
 
 .discount{
@@ -119,20 +168,24 @@ nav{
     background-color: hsl(25, 100%, 94%);
     color: hsl(26, 100%, 55%);
     border-radius: 5px;
+    font-weight: bold;
 }
 
 .orgin-price{
     margin-left: auto;
     display: inherit;
+    opacity: 60%;
 }
 
 .product-count{
     margin: 20px 0px;
     display: flex;
+    padding: 0px 5px;
+    border-radius: 10px;
     flex-wrap: nowrap;
     justify-content: space-between;
     background-color: hsl(25, 100%, 94%);
-    height: 30px;
+    height: 40px;
 
 }
 
@@ -147,10 +200,11 @@ nav{
     background-color: hsl(25, 100%, 94%);
     color: hsl(26, 100%, 55%);
     border: 0px;
+    font-weight: 900;
     
 }
 
-#plusButton:hover,#minusButton:hover{
+#plusButton:hover,#minusButton:hover,#prevButton:hover,#nextButton:hover{
     cursor: pointer;   
 }
 
@@ -170,4 +224,125 @@ nav{
 
 .add-to-cart:hover{
     cursor: pointer;
+}
+
+
+@media (min-width: 690px) {
+    ul{
+        padding: 0px;
+    }
+
+    header{
+        margin: 0 10% 0 10%;
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menu-icon{
+        display: none;
+    }
+
+    nav{
+        display: flex;
+        justify-content: center;
+    }
+
+    nav ul{
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+    }
+
+    nav ul li{
+        margin:5px 15px 0 15px;
+        opacity: 80%;
+        display: inline;
+        vertical-align: middle;
+    }
+
+    #cart-icon{
+        height: 15px;
+        align-content: end;
+        margin: 0 15px 0 auto;
+    }
+
+    #avatar-icon{
+        height: 35px;
+    }
+
+    .main hr{
+        display: block;
+        opacity: 60%;
+        margin-top: 20px;
+        margin-bottom: 80px;
+        width: 80%;
+    }
+
+    .container{
+        display: flex;
+        width: 70%;
+        justify-content: center;
+        margin: 0 15%;
+    }
+
+    .buttons{
+        display: none;
+    }
+
+    .slider{
+        display: block;
+        height: unset;
+    }
+
+    .slider-image{
+        border-radius: 20px;
+        width: 100%;
+        height: 440px;
+        position: relative;
+    }
+
+    .discription,.price-count{
+        width: 70%;
+        margin: 40px 15% 0 15%;
+    }
+
+    .accounting{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .add-to-cart{
+        width: 100%;
+        padding: 10px 20px ;
+        margin: 5px 0 5px 15px;
+    }
+
+    .product-count input{
+        width: 25%;
+    }
+
+    .thumbnail-images{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        
+    }
+
+    .thumb-image{
+        border-radius: 10px;
+        width: 20%;
+        margin: 15px 5px;
+    }
+
+    .thumb-image:hover{
+        cursor: pointer;
+    }
+
+    #minusButton{
+        margin-right: 18px;
+    }
+    
 }

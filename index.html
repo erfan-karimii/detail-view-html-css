@@ -30,6 +30,9 @@
           <li>Contact</li>
         </ul>
       </div>
+      
+      <img class="header-item menu-icon" id="menu-icon-open" src="./images/icon-menu.svg" alt="open-header">
+      <h1  class="header-item" id="logo-text">sneakers</h1>
       <nav>
         <ul>
           <li>Collections</li>
@@ -39,63 +42,76 @@
           <li>Contact</li>
         </ul>
       </nav>
-      <img class="header-item menu-icon" id="menu-icon-open" src="./images/icon-menu.svg" alt="open-header">
-      
-      <h1  class="header-item" id="logo-text">sneakers</h1>
-      <img class="header-item" id="avatar-icon" src="./images/image-avatar.png" alt="avatar-image" height="22px">
-      <img class="header-item" id="cart-icon" src="./images/icon-cart.svg" alt="cart-image">
+      <img class="header-item" id="cart-icon" src="./images/icon-cart.svg" alt="cart-image" >
+      <img class="header-item" id="avatar-icon" src="./images/image-avatar.png" alt="avatar-image">
     </header>
     <div class="main">
+      <hr>
       <div id="shadow"></div>
+      <div class="container">
 
-      <div class="slider">
-        <img class="slider-image" src="./images/image-product-2.jpg" alt="slider-image">
-        <img class="slider-image" src="./images/image-product-1.jpg" alt="slider-image">
-        
-        <div class="buttons">
-          <button id="prevButton"><</button>
-          <button id="nextButton">></button>
+        <div class="slider">
+          <img class="slider-image" id="image-1" src="./images/image-product-1.jpg" alt="slider-image">
+          <img class="slider-image" id="image-2" src="./images/image-product-2.jpg" alt="slider-image">
+          <img class="slider-image" id="image-3" src="./images/image-product-3.jpg" alt="slider-image">
+          <img class="slider-image" id="image-4" src="./images/image-product-4.jpg" alt="slider-image">
+
+          <div class="thumbnail-images">
+            <img class="thumb-image" src="./images/image-product-1-thumbnail.jpg"  data-image_id="1"  alt="thumbnail-image">
+            <img class="thumb-image" src="./images/image-product-2-thumbnail.jpg"  data-image_id="2"  alt="thumbnail-image">
+            <img class="thumb-image" src="./images/image-product-3-thumbnail.jpg"  data-image_id="3"  alt="thumbnail-image">
+            <img class="thumb-image" src="./images/image-product-4-thumbnail.jpg"  data-image_id="4"  alt="thumbnail-image">
+          </div>
+  
+          <div class="buttons">
+            <button id="prevButton"><</button>
+            <button id="nextButton">></button>
+          </div>
+        </div>
+
+        <div class="information-container">
+
+          <div class="discription">
+            <p id="title">SNEAKER COMPANY</p>
+            <h2>Fall Limited Edition Sneakers</h2>
+            <p>
+              These low-profile sneakers are your perfect casual wear companion. Featuring a 
+              durable rubber outer sole, they’ll withstand everything the weather can offer.
+            </p>
+          </div>
+
+          <div class="price-count">
+            <div class="price-offer">
+              <div class="total-price">
+                $125.00
+              </div>
+              
+              <div class="discount">
+                50%
+              </div>
+
+              <div class="orgin-price">
+                <del>$250.00</del>
+              </div>
+            </div>
+            <div class="accounting">
+
+              <div class="product-count">
+                <button id="minusButton">-</button>
+                <input  id="count-input" type="text" inputmode="numeric" maxlength="3" value="0"/>
+                <button id="plusButton">+</button>
+              </div>
+              
+              <div class="add-to-cart">
+                <img src="./images/icon-cart.svg" alt="cart-icon">
+                <div class="cart-text">Add to cart</div>
+              </div>
+
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="information-container">
-
-        <div class="discription">
-          <p>Sneaker Company</p>
-          <h2>Fall Limited Edition Sneakers</h2>
-          <p>
-            These low-profile sneakers are your perfect casual wear companion. Featuring a 
-            durable rubber outer sole, they’ll withstand everything the weather can offer.
-          </p>
-        </div>
-
-        <div class="price-count">
-          <div class="price-offer">
-            <div class="total-price">
-              $125.00
-            </div>
-            
-            <div class="discount">
-              50%
-            </div>
-
-            <div class="orgin-price">
-              <del>$250.00</del>
-            </div>
-          </div>
-
-          <div class="product-count">
-            <button id="minusButton">-</button>
-            <input type="text" inputmode="numeric" maxlength="3" value="0"/>
-            <button id="plusButton">+</button>
-          </div>
-
-          <div class="add-to-cart">
-            <img src="./images/icon-cart.svg" alt="cart-icon">
-            <div class="cart-text">Add to cart</div>
-          </div>
-        </div>
-      </div>
       
     </div>
 
